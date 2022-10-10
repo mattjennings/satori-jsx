@@ -1,0 +1,24 @@
+{
+  "name": "satori-jsx",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "keywords": [],
+  "author": "mattjennings",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattjennings/satori-jsx"
+  },
+  "license": "ISC",
+  "exports": {
+    ".": "./index.js",
+    "./vite": "./vite.js"
+  },
+  "peerDependencies": {
+    "vite": "^3.0.0"
+  },
+  "devDependencies": {
+    "vite": "^3.1.7"
+  }
+}
