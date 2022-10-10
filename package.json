@@ -1,6 +1,6 @@
 {
   "name": "satori-jsx",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Use JSX with Satori without React",
   "main": "index.js",
   "type": "module",
