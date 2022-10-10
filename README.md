@@ -1,7 +1,6 @@
 # satori-jsx
 
-Simple JSX parser for use with [Satori](https://github.com/vercel/satori#jsx). This
-is useful if you want to use JSX without React/Preact.
+Use JSX with [Satori](https://github.com/vercel/satori#jsx) without React
 
 ## Install
 
@@ -9,7 +8,8 @@ is useful if you want to use JSX without React/Preact.
 npm install satori-jsx
 ```
 
-## Vite
+## Usage
+### Vite
 
 ```js
 import satori from 'satori-jsx/vite'
@@ -29,25 +29,33 @@ If you're using typescript, make sure to add the following to your `tsconfig.jso
 }
 ```
 
-## Babel
+### Babel
+
+```
+npm install -D @babel/plugin-syntax-jsx @babel/plugin-transform-react-jsx
+```
 
 Update your .babelrc
 
 ```js
 {
   "plugins": [
-    ["@babel/plugin-transform-react-jsx", { "pragma":"h" }]
+    "@babel/plugin-syntax-jsx",
+    [
+      "@babel/plugin-transform-react-jsx",
+      {
+        "runtime": "automatic",
+        "importSource": "satori-jsx"          
+      }
+    ]
   ]
 }
 ```
 
-Make sure to import `h` from `satori-jsx`
+## Typescript
 
-```js
-import { h } from 'satori-jsx'
-import satori from 'satori'
+For JSX types, it's best to use react's.
 
-const svg = await satori(<div>hello world</div>, {
-  fonts: [...]
-})
+```
+npm install -D @types/react @types/react-dom
 ```
